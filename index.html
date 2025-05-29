@@ -4,8 +4,125 @@
   <meta charset="UTF-8">
   <title>My Personal Site</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Add Google Fonts for a modern look -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+  <!-- The font will be set in style.css -->
+  <script>
+    // This script adds the 'visible' class to sections when they enter the viewport
+    document.addEventListener('DOMContentLoaded', function() {
+      // Select all sections except the welcome banner
+      const sections = document.querySelectorAll('section:not(#welcome)');
+      function revealSections() {
+        sections.forEach(section => {
+          const rect = section.getBoundingClientRect();
+          // If the section is in the viewport, add the 'visible' class
+          if (rect.top < window.innerHeight - 50) {
+            section.classList.add('visible');
+          }
+        });
+      }
+      window.addEventListener('scroll', revealSections);
+      revealSections(); // Run on page load
+    });
+
+    // Simple slideshow for About section
+    document.addEventListener('DOMContentLoaded', function() {
+      const slides = document.querySelectorAll('.slideshow-img');
+      let current = 0;
+      function showSlide(index) {
+        slides.forEach((img, i) => {
+          img.style.opacity = (i === index) ? '1' : '0';
+        });
+      }
+      function nextSlide() {
+        current = (current + 1) % slides.length;
+        showSlide(current);
+      }
+      if (slides.length > 0) {
+        showSlide(current);
+        setInterval(nextSlide, 3000); // Change image every 3 seconds
+      }
+    });
+  </script>
 </head>
 <body>
-  <!-- Add your HTML content here -->
+  <!-- Welcome Banner Section -->
+  <section id="welcome">
+    <div class="welcome-content">
+      <img src="img/Linkedin Photo (1).jpg" alt="My Profile Photo" width="150">
+      <h1>Colin Nguyen</h1>
+    </div>
+  </section>
+  <!-- Navigation Banner -->
+  <nav class="section-nav">
+    <!-- Navigation links to each section -->
+    <a href="#about">About Me</a>
+    <a href="#projects">Projects</a>
+    <a href="#interests">Interests</a>
+    <a href="#links">Links</a>
+  </nav>
+  <!-- About and Slideshow Row -->
+  <div class="about-container">
+    <!-- Slideshow for About Section -->
+    <div class="slideshow">
+      <img src="img/asians.jpg" alt="asians" class="slideshow-img">
+      <img src="img/bring.jpg" alt="bring" class="slideshow-img">
+      <img src="img/chicag.jpg" alt="chicag" class="slideshow-img">
+      <img src="img/gray.jpg" alt="gray" class="slideshow-img">
+      <img src="img/rivier.jpg" alt="rivier" class="slideshow-img">
+      <img src="img/sant.jpg" alt="sant" class="slideshow-img">
+    </div>
+    <!-- About Section -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        <!-- Write a short introduction about yourself here -->
+        Hello world! 
+
+My name is Colin Nguyen, and I am currently a sophomore at Denison University. I plan on double majoring in computer science and data analytics.
+I have a very curious mind, and I always love to learn something new. Even if I'm not good at something at the start, I will always put in my time and best effort. I'd also like to say that I'm very easy going, and that I will always treat others with respect. Any and every opportunity to better myself and expand my horizons will be welcomed enthusiastically!
+      </p>
+    </section>
+  </div>
+  <!-- Everything else goes below the about/slideshow row -->
+  <div class="container">
+    <!-- Interests Section (moved above Projects) -->
+    <section id="interests">
+      <h2 class="center-heading">Interests</h2>
+      <!-- Add trumpet and art images with captions side by side -->
+      <div style="display: flex; justify-content: center; gap: 32px; margin-top: 20px;">
+        <!-- Trumpet image and caption -->
+        <div style="text-align: center;">
+          <img src="img/trpt.jpg" alt="Trumpet" style="width:180px; height:180px; object-fit:cover; display:block; margin: 0 auto;">
+          <div style="margin-top: 8px; color: #444;">I like playing music on my trumpet!</div>
+        </div>
+        <!-- Art image and caption -->
+        <div style="text-align: center;">
+          <img src="img/arrt.jpg" alt="Art" style="width:180px; height:180px; object-fit:cover; display:block; margin: 0 auto;">
+          <div style="margin-top: 8px; color: #444;">I like making any kind of art!</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <ul>
+        <!-- List your projects here -->
+        <li>Project 1: Coming soon!</li>
+        <li>Project 2: Coming soon!</li>
+      </ul>
+    </section>
+
+    <!-- Links Section -->
+    <section id="links">
+      <h2>Links</h2>
+      <ul>
+        <!-- Add your social or professional links here -->
+        <li><a href="#">GitHub</a></li>
+        <li><a href="#">LinkedIn</a></li>
+      </ul>
+    </section>
+  </div>
 </body>
 </html>
