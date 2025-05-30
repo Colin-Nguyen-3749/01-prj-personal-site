@@ -16,10 +16,10 @@ body {
   margin-left: calc(50% - 50vw);
   box-sizing: border-box;
   margin-top: 0;
-  /* Set the new background image and overlay for the banner */
+  /* Set a darker overlay for the banner */
   background-image:
-    linear-gradient(rgba(74, 144, 226, 0.6), rgba(74, 144, 226, 0.6)), /* Light blue overlay */
-    url('img/sunset.jpeg'); /* New banner background image */
+    linear-gradient(rgba(40, 60, 90, 0.7), rgba(40, 60, 90, 0.7)), /* Darker blue overlay */
+    url('img/sunset.jpg'); /* New banner background image */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -226,13 +226,13 @@ section.visible {
   font-size: 1em;
 }
 
-/* Layout for Projects and Links sections side by side */
+/* Layout for Projects, Links, and Contact sections side by side */
 .projects-links-row {
-  display: flex; /* Place projects and links in a row */
+  display: flex; /* Place sections in a row */
   justify-content: center; /* Center the row horizontally */
   align-items: flex-start; /* Align items at the top */
-  gap: 48px; /* Space between the two sections */
-  max-width: 1000px; /* Limit total width */
+  gap: 48px; /* Space between the sections */
+  max-width: 1200px; /* Limit total width */
   margin: 0 auto 40px auto; /* Center and add space below */
 }
 
@@ -249,10 +249,94 @@ section.visible {
   padding: 32px 24px;
 }
 
+/* Style for the Contact Me section */
+#contact {
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: 40px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 32px 24px;
+}
+
+/* Make sure the text color is readable if background is white */
+#contact h2,
+#contact p,
+#contact a {
+  color: #222;
+}
+
 /* Make sure the text color is readable if background is white */
 #links h2,
 #links ul,
 #links li,
 #links a {
   color: #222;
+}
+
+/* Interests section with a dark navy blue background */
+#interests {
+  background: #1a2233; /* Dark navy blue */
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 32px 24px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/* Make the heading and text in interests section light for contrast */
+#interests h2,
+#interests p,
+#interests .interest-caption {
+  color: #f0f4fa;
+}
+
+/* Skills section with a dark navy blue background and unrounded edges */
+#skills {
+  background: #1a2233; /* Dark navy blue */
+  border-radius: 0; /* No rounded corners */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 32px 24px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/* Make the heading and text in skills section white for contrast */
+#skills h2,
+#skills ul,
+#skills li {
+  color: #fff;
+}
+
+/* Make the skills list display horizontally, bigger, and spread out */
+#skills ul {
+  display: flex;
+  justify-content: space-evenly; /* Evenly spread out from left to right */
+  align-items: center;
+  gap: 0;
+  flex-wrap: wrap;
+  padding: 0;
+  list-style: none;
+  margin: 24px auto 0 auto;
+  width: 100%;
+  max-width: none;
+}
+
+/* Make each skill item bigger and center content */
+#skills li {
+  font-size: 1.5em;
+  font-weight: 400; /* Not bold */
+  margin-bottom: 0;
+  letter-spacing: 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Optional: Add some space below the skill icon */
+.skill-icon {
+  margin-bottom: 8px;
 }
