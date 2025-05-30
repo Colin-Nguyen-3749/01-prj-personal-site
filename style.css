@@ -8,21 +8,21 @@ body {
 
 /* Style for the welcome banner section */
 #welcome {
-  background-color: #4a90e2; /* A modern blue color */
-  color: white; /* White text for contrast */
-  padding: 40px 0; /* Space above and below the content */
-  text-align: center; /* Center everything in the section */
-  width: 100vw; /* Make the banner full width of the viewport */
-  margin-left: calc(50% - 50vw); /* Shift the section to the left to cover the full screen */
-  box-sizing: border-box; /* Include padding in the width */
-  margin-top: 0; /* Remove any space above the banner */
-  /* Set the background image and overlay */
-  background-image: 
-    linear-gradient(rgba(74, 144, 226, 0.7), rgba(74, 144, 226, 0.7)), /* Light blue overlay */
-    url('img/DU.jpg'); /* Banner background image */
-  background-size: cover; /* Cover the whole banner */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
+  background-color: #4a90e2;
+  color: white;
+  padding: 100px 0;
+  text-align: center;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  box-sizing: border-box;
+  margin-top: 0;
+  /* Set the new background image and overlay for the banner */
+  background-image:
+    linear-gradient(rgba(74, 144, 226, 0.6), rgba(74, 144, 226, 0.6)), /* Light blue overlay */
+    url('img/sunset.jpeg'); /* New banner background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   opacity: 1;
   animation: none;
 }
@@ -186,5 +186,73 @@ section.visible {
 #projects h2,
 #projects ul,
 #projects li {
+  color: #222;
+}
+
+/* Evenly space all images and captions in the interests section, including edge spacing */
+.interests-images-row {
+  display: flex;
+  justify-content: space-evenly; /* Even space between items and edges */
+  align-items: flex-start;
+  gap: 0; /* No extra gap, space-evenly handles spacing */
+  margin-top: 20px;
+  padding-left: 40px;  /* Add space from the left edge */
+  padding-right: 40px; /* Add space from the right edge */
+  box-sizing: border-box; /* Include padding in width */
+}
+
+/* Style for each interest item (image + caption) */
+.interest-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px; /* Even space between image and caption */
+}
+
+/* Style for interest images */
+.interest-img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Style for interest captions */
+.interest-caption {
+  margin-top: 0;
+  color: #444;
+  text-align: center;
+  font-size: 1em;
+}
+
+/* Layout for Projects and Links sections side by side */
+.projects-links-row {
+  display: flex; /* Place projects and links in a row */
+  justify-content: center; /* Center the row horizontally */
+  align-items: flex-start; /* Align items at the top */
+  gap: 48px; /* Space between the two sections */
+  max-width: 1000px; /* Limit total width */
+  margin: 0 auto 40px auto; /* Center and add space below */
+}
+
+/* Style for the Links section to appear on the right */
+#links {
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: 40px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 32px 24px;
+}
+
+/* Make sure the text color is readable if background is white */
+#links h2,
+#links ul,
+#links li,
+#links a {
   color: #222;
 }

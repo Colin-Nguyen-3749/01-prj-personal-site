@@ -49,7 +49,7 @@
   <!-- Welcome Banner Section -->
   <section id="welcome">
     <div class="welcome-content">
-      <img src="img/Linkedin Photo (1).jpg" alt="My Profile Photo" width="150">
+      <!-- Removed the image from the header -->
       <h1>Colin Nguyen</h1>
     </div>
   </section>
@@ -65,6 +65,7 @@
   <div class="about-container">
     <!-- Slideshow for About Section -->
     <div class="slideshow">
+      <img src="img/Linkedin Photo (1).jpg" alt="My Profile Photo" class="slideshow-img">
       <img src="img/asians.jpg" alt="asians" class="slideshow-img">
       <img src="img/bring.jpg" alt="bring" class="slideshow-img">
       <img src="img/chicag.jpg" alt="chicag" class="slideshow-img">
@@ -89,40 +90,47 @@ I have a very curious mind, and I always love to learn something new. Even if I'
     <!-- Interests Section (moved above Projects) -->
     <section id="interests">
       <h2 class="center-heading">Interests</h2>
-      <!-- Add trumpet and art images with captions side by side -->
-      <div style="display: flex; justify-content: center; gap: 32px; margin-top: 20px;">
+      <!-- Add trumpet, art, and panda images with captions side by side -->
+      <div class="interests-images-row">
         <!-- Trumpet image and caption -->
-        <div style="text-align: center;">
-          <img src="img/trpt.jpg" alt="Trumpet" style="width:180px; height:180px; object-fit:cover; display:block; margin: 0 auto;">
-          <div style="margin-top: 8px; color: #444;">I like playing music on my trumpet!</div>
+        <div class="interest-item">
+          <img src="img/trpt.jpg" alt="Trumpet" class="interest-img">
+          <div class="interest-caption">I like playing music on my trumpet!</div>
         </div>
         <!-- Art image and caption -->
-        <div style="text-align: center;">
-          <img src="img/arrt.jpg" alt="Art" style="width:180px; height:180px; object-fit:cover; display:block; margin: 0 auto;">
-          <div style="margin-top: 8px; color: #444;">I like making any kind of art!</div>
+        <div class="interest-item">
+          <img src="img/arrt.jpg" alt="Art" class="interest-img">
+          <div class="interest-caption">I like making any kind of art!</div>
+        </div>
+        <!-- Panda image and caption -->
+        <div class="interest-item">
+          <img src="img/panda.avif" alt="Panda Bear" class="interest-img">
+          <div class="interest-caption">I like panda bears!</div>
         </div>
       </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
-      <h2>Projects</h2>
-      <ul>
-        <!-- List your projects here -->
-        <li>Project 1: Coming soon!</li>
-        <li>Project 2: Coming soon!</li>
-      </ul>
-    </section>
-
-    <!-- Links Section -->
-    <section id="links">
-      <h2>Links</h2>
-      <ul>
-        <!-- Add your social or professional links here -->
-        <li><a href="#">GitHub</a></li>
-        <li><a href="#">LinkedIn</a></li>
-      </ul>
-    </section>
+    <!-- Projects and Links side by side -->
+    <div class="projects-links-row">
+      <!-- Projects Section -->
+      <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+          <!-- List your projects here -->
+          <li>Project 1: Coming soon!</li>
+          <li>Project 2: Coming soon!</li>
+        </ul>
+      </section>
+      <!-- Links Section -->
+      <section id="links">
+        <h2>Links</h2>
+        <ul>
+          <!-- Add your social or professional links here -->
+          <li><a href="#">GitHub</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
+      </section>
+    </div>
   </div>
 </body>
 </html>
