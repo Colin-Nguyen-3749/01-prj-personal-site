@@ -52,12 +52,15 @@
 <body>
   <!-- Welcome Banner Section -->
   <!-- 
-    Made the header section taller to show more of the background.
+    Made the header section a bit smaller by reducing min-height and padding.
     You can set a background image in your CSS for #welcome.
   -->
-  <section id="welcome" class="container-fluid py-5" style="min-height: 320px;">
-    <div class="welcome-content text-center">
-      <!-- Removed the image from the header -->
+  <section id="welcome" class="container-fluid py-4" style="min-height: 180px; position: relative;">
+    <!-- 
+      The welcome-content is now positioned absolutely at the bottom center of the header.
+      This keeps 'Colin Nguyen' centered at the bottom.
+    -->
+    <div class="welcome-content text-center" style="position: absolute; left: 0; right: 0; bottom: 16px;">
       <h1>Colin Nguyen</h1>
     </div>
   </section>
@@ -76,15 +79,15 @@
   </nav>
   <!-- About and Slideshow Row -->
   <!-- 
-    This wrapper centers the content and makes it larger on wide screens.
-    On small screens, the sections stack vertically.
-    On medium and larger screens, they are side by side and centered.
+    The slideshow and About Me are now in two separate sections.
+    On desktop, they are side by side. On mobile, they stack vertically.
+    This is done using Bootstrap's row and col classes.
   -->
   <div class="about-center-wrapper d-flex justify-content-center">
     <div class="about-container container my-4" style="max-width: 900px;">
       <div class="row align-items-center">
-        <!-- Slideshow for About Section -->
-        <div class="col-12 col-md-6 mb-3 mb-md-0">
+        <!-- Slideshow Section -->
+        <section class="col-12 col-md-6 mb-3 mb-md-0" aria-label="Photo Slideshow">
           <div class="slideshow w-100">
             <!-- Each image has descriptive alt text for accessibility -->
             <img src="img/Linkedin Photo (1).jpg" alt="Colin Nguyen's Profile Photo" class="slideshow-img img-fluid rounded w-100">
@@ -95,8 +98,8 @@
             <img src="img/rivier.jpg" alt="Colin at the Riviera" class="slideshow-img img-fluid rounded w-100">
             <img src="img/sant.jpg" alt="Colin at a festive event" class="slideshow-img img-fluid rounded w-100">
           </div>
-        </div>
-        <!-- About Section -->
+        </section>
+        <!-- About Me Section -->
         <section id="about" class="col-12 col-md-6">
           <h2>About Me</h2>
           <p>
