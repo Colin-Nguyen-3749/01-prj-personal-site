@@ -7,10 +7,6 @@
   <!-- Add Google Fonts for a modern look -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
   <!-- The font will be set in style.css -->
-  <!-- Add Bootstrap CSS for responsive navigation -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Add viewport meta tag for mobile responsiveness -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>
     // This script adds the 'visible' class to sections when they enter the viewport
     document.addEventListener('DOMContentLoaded', function() {
@@ -51,134 +47,103 @@
 </head>
 <body>
   <!-- Welcome Banner Section -->
-  <!-- 
-    Made the header section a bit smaller by reducing min-height and padding.
-    You can set a background image in your CSS for #welcome.
-  -->
-  <section id="welcome" class="container-fluid py-4" style="min-height: 180px; position: relative;">
-    <!-- 
-      The welcome-content is now positioned absolutely at the bottom center of the header.
-      This keeps 'Colin Nguyen' centered at the bottom.
-    -->
-    <div class="welcome-content text-center" style="position: absolute; left: 0; right: 0; bottom: 16px;">
+  <section id="welcome">
+    <div class="welcome-content">
+      <!-- Removed the image from the header -->
       <h1>Colin Nguyen</h1>
     </div>
   </section>
   <!-- Navigation Banner -->
-  <!-- 
-    This navigation bar uses Bootstrap flexbox classes.
-    It will stack links vertically on small screens and horizontally on larger screens.
-  -->
-  <nav class="section-nav d-flex flex-column flex-md-row justify-content-center align-items-center gap-2 py-2">
+  <nav class="section-nav">
     <!-- Navigation links to each section -->
-    <a href="#about" class="nav-link px-2">About Me</a>
-    <a href="#projects" class="nav-link px-2">Projects</a>
-    <a href="#skills" class="nav-link px-2">Skills</a>
-    <a href="#links" class="nav-link px-2">Links</a>
-    <a href="#contact" class="nav-link px-2">Contact Me</a>
+    <a href="#about">About Me</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#links">Links</a>
+    <a href="#contact">Contact Me</a>
   </nav>
   <!-- About and Slideshow Row -->
-  <!-- 
-    The slideshow and About Me are now in two separate sections.
-    On desktop, they are side by side. On mobile, they stack vertically.
-    This is done using Bootstrap's row and col classes.
-  -->
-  <div class="about-center-wrapper d-flex justify-content-center">
-    <div class="about-container container my-4" style="max-width: 900px;">
-      <div class="row align-items-center">
-        <!-- Slideshow Section -->
-        <section class="col-12 col-md-6 mb-3 mb-md-0" aria-label="Photo Slideshow">
-          <div class="slideshow w-100">
-            <!-- Each image has descriptive alt text for accessibility -->
-            <img src="img/Linkedin Photo (1).jpg" alt="Colin Nguyen's Profile Photo" class="slideshow-img img-fluid rounded w-100">
-            <img src="img/asians.jpg" alt="Colin with friends at an event" class="slideshow-img img-fluid rounded w-100">
-            <img src="img/bring.jpg" alt="Colin at a social gathering" class="slideshow-img img-fluid rounded w-100">
-            <img src="img/chicag.jpg" alt="Colin visiting Chicago" class="slideshow-img img-fluid rounded w-100">
-            <img src="img/gray.jpg" alt="Colin in a gray outfit" class="slideshow-img img-fluid rounded w-100">
-            <img src="img/rivier.jpg" alt="Colin at the Riviera" class="slideshow-img img-fluid rounded w-100">
-            <img src="img/sant.jpg" alt="Colin at a festive event" class="slideshow-img img-fluid rounded w-100">
-          </div>
-        </section>
-        <!-- About Me Section -->
-        <section id="about" class="col-12 col-md-6">
-          <h2>About Me</h2>
-          <p>
-            <!-- Write a short introduction about yourself here -->
-            Hello world! 
+  <div class="about-container">
+    <!-- Slideshow for About Section -->
+    <div class="slideshow">
+      <!-- Each image has descriptive alt text for accessibility -->
+      <img src="img/Linkedin Photo (1).jpg" alt="Colin Nguyen's Profile Photo" class="slideshow-img">
+      <img src="img/asians.jpg" alt="Colin with friends at an event" class="slideshow-img">
+      <img src="img/bring.jpg" alt="Colin at a social gathering" class="slideshow-img">
+      <img src="img/chicag.jpg" alt="Colin visiting Chicago" class="slideshow-img">
+      <img src="img/gray.jpg" alt="Colin in a gray outfit" class="slideshow-img">
+      <img src="img/rivier.jpg" alt="Colin at the Riviera" class="slideshow-img">
+      <img src="img/sant.jpg" alt="Colin at a festive event" class="slideshow-img">
+    </div>
+    <!-- About Section -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        <!-- Write a short introduction about yourself here -->
+        Hello world! 
 
 My name is Colin Nguyen, and I am currently a sophomore at Denison University. I plan on double majoring in computer science and data analytics.
 I have a very curious mind, and I always love to learn something new. Even if I'm not good at something at the start, I will always put in my time and best effort. I'd also like to say that I'm very easy going, and that I will always treat others with respect. Any and every opportunity to better myself and expand my horizons will be welcomed enthusiastically!
-          </p>
-        </section>
-      </div>
-    </div>
+      </p>
+    </section>
   </div>
   <!-- Everything else goes below the about/slideshow row -->
-  <!-- Use Bootstrap's container class for responsive layout -->
   <div class="container">
     <!-- Skills Section (replaces Interests) -->
     <section id="skills">
-      <h2 class="center-heading text-center">Skills</h2>
+      <h2 class="center-heading">Skills</h2>
       <!-- First row of skills with images above each skill -->
-      <ul class="skills-list d-flex flex-wrap justify-content-center gap-3 p-0 mb-3" style="list-style:none;">
-        <li class="text-center flex-fill" style="min-width:120px;">
-          <img src="img/pyt2.png" alt="Python programming language logo" class="skill-icon img-fluid" style="width:48px; height:48px; display:block; margin:0 auto 8px auto;">
+      <ul class="skills-list">
+        <li>
+          <img src="img/pyt2.png" alt="Python programming language logo" class="skill-icon" style="width:48px; height:48px; display:block; margin:0 auto 8px auto;">
           Python
         </li>
-        <li class="text-center flex-fill" style="min-width:120px;">
-          <img src="img/plus2.png" alt="C++ programming language logo" class="skill-icon img-fluid" style="width:48px; height:48px; display:block; margin:0 auto 8px auto;">
+        <li>
+          <img src="img/plus2.png" alt="C++ programming language logo" class="skill-icon" style="width:48px; height:48px; display:block; margin:0 auto 8px auto;">
           C++
         </li>
-        <li class="text-center flex-fill" style="min-width:120px;">
-          <img src="img/R2.png" alt="R programming language logo" class="skill-icon img-fluid" style="width:48px; height:48px; display:block; margin:0 auto 8px auto;">
+        <li>
+          <img src="img/R2.png" alt="R programming language logo" class="skill-icon" style="width:48px; height:48px; display:block; margin:0 auto 8px auto;">
           R
         </li>
-        <li class="text-center flex-fill" style="min-width:120px;">
-          <img src="img/SQL2.png" alt="SQL database logo" class="skill-icon img-fluid" style="width:48px; height:48px; display:block; margin:0 auto 8px auto;">
+        <li>
+          <img src="img/SQL2.png" alt="SQL database logo" class="skill-icon" style="width:48px; height:48px; display:block; margin:0 auto 8px auto;">
           SQL
         </li>
       </ul>
       <!-- Second row of skills (soft skills) with images above each skill -->
-      <ul class="skills-list d-flex flex-wrap justify-content-center gap-3 p-0" style="list-style:none;">
-        <li class="text-center flex-fill" style="min-width:120px;">
-          <img src="img/team.png" alt="Teamwork icon" class="skill-icon img-fluid" style="width:48px; height:48px; display:block; margin:0 auto 8px auto;">
+      <ul class="skills-list">
+        <li>
+          <img src="img/team.png" alt="Teamwork icon" class="skill-icon" style="width:48px; height:48px; display:block; margin:0 auto 8px auto;">
           Collaboration
         </li>
-        <li class="text-center flex-fill" style="min-width:120px;">
-          <img src="img/patience.png" alt="Patience icon" class="skill-icon img-fluid" style="width:48px; height:48px; display:block; margin:0 auto 8px auto;">
+        <li>
+          <img src="img/patience.png" alt="Patience icon" class="skill-icon" style="width:48px; height:48px; display:block; margin:0 auto 8px auto;">
           Patience
         </li>
-        <li class="text-center flex-fill" style="min-width:120px;">
-          <img src="img/curiosity.png" alt="Curiosity icon" class="skill-icon img-fluid" style="width:48px; height:48px; display:block; margin:0 auto 8px auto;">
+        <li>
+          <img src="img/curiosity.png" alt="Curiosity icon" class="skill-icon" style="width:48px; height:48px; display:block; margin:0 auto 8px auto;">
           Curiosity
         </li>
-        <li class="text-center flex-fill" style="min-width:120px;">
-          <img src="img/prob.png" alt="Creativity icon" class="skill-icon img-fluid" style="width:48px; height:48px; display:block; margin:0 auto 8px auto;">
+        <li>
+          <img src="img/prob.png" alt="Creativity icon" class="skill-icon" style="width:48px; height:48px; display:block; margin:0 auto 8px auto;">
           Creativity
         </li>
       </ul>
     </section>
     <!-- Projects, Links, and Contact side by side -->
-    <!-- 
-      Use Bootstrap's row and col classes to make these sections responsive.
-      They will stack on small screens and be side by side on larger screens.
-    -->
-    <div class="projects-links-row row my-4">
+    <div class="projects-links-row">
       <!-- Projects Section -->
-      <section id="projects" class="col-12 col-md-4 mb-4 mb-md-0">
+      <section id="projects">
         <h2>Projects</h2>
         <ul>
-          <!-- Project 1 now links to your project website -->
-          <li>
-            <a href="https://colin-nguyen-3749.github.io/03-prj-intel-localization/" target="_blank" rel="noopener">
-              Project 1: Intel Localization Website
-            </a>
-          </li>
+          <!-- List your projects here -->
+          <li>Project 1: Coming soon!</li>
           <li>Project 2: Coming soon!</li>
         </ul>
       </section>
       <!-- Links Section -->
-      <section id="links" class="col-12 col-md-4 mb-4 mb-md-0">
+      <section id="links">
         <h2>Links</h2>
         <ul>
           <!-- Add your social or professional links here -->
@@ -187,7 +152,7 @@ I have a very curious mind, and I always love to learn something new. Even if I'
         </ul>
       </section>
       <!-- Contact Me Section -->
-      <section id="contact" class="col-12 col-md-4">
+      <section id="contact">
         <h2>Contact Me</h2>
         <p style="margin-top:16px;">
           <!-- Simple contact info for beginners -->
@@ -197,7 +162,7 @@ I have a very curious mind, and I always love to learn something new. Even if I'
     </div>
   </div>
   <!-- Small section at the bottom with the same background color as the skills section -->
-  <section class="site-footer" style="background-color:#1a2233;">
+  <section class="site-footer">
     <!-- This section can be used for any extra info or a simple message -->
     <p style="text-align:center; color:white; margin:12px 0;">
       <!-- Example message for students to edit or personalize -->
